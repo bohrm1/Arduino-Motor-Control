@@ -20,6 +20,7 @@ MotorNoEncoder motor1;
 MotorNoEncoder motor2;
 MotorNoEncoder motor3;
 MotorNoEncoder motor4;
+MotorNoEncoder motor5;
 
 void setup() {
   pinMode(PWMA,OUTPUT);
