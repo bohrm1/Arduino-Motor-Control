@@ -2,6 +2,7 @@
 #define doEncoderA_h
 #include "Arduino.h"
 
+
 void doEncoderA() {
   int encoder1A = 2;
   int encoder1B = 3;
