@@ -3,8 +3,6 @@
 #include "MotorNoEncoder.h"
 #include "Arduino.h"
 
-//BLAH BLAH TESTING MAIN VS MASTER
-
 void DriveRover (int pwr, int dir, MotorNoEncoder &motor1, MotorNoEncoder &motor2, MotorNoEncoder &motor3, MotorNoEncoder &motor4) 
 {
     if (pwr != 0) 
