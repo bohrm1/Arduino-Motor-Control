@@ -2,12 +2,14 @@
 #include "MotorNoEncoder.h"
 
 MotorNoEncoder::MotorNoEncoder(void){}
-void MotorNoEncoder::ConnectPins(int in1, int in2, int pwmPin) {
+void MotorNoEncoder::ConnectPins(int in1, int in2, int pwmPin) 
+{
   In1 = in1;
   In2 = in2;
   PWMPin = pwmPin;
 }
-void MotorNoEncoder::Drive(int pwr) {
+void MotorNoEncoder::Drive(int pwr) 
+{
     analogWrite(PWMPin, abs(pwr));
     if (pwr < 0) { 
       digitalWrite(In1,HIGH);

@@ -21,7 +21,8 @@ MotorNoEncoder motor2;
 MotorNoEncoder motor3;
 MotorNoEncoder motor4;
 
-void setup() {
+void setup() 
+{
   pinMode(PWMA,OUTPUT);
   pinMode(IN1A,OUTPUT);
   pinMode(IN2A,OUTPUT);
@@ -44,7 +45,8 @@ void setup() {
   motor4.ConnectPins(IN1D, IN2D, PWMD);
 }
 
-void loop() {
+void loop() 
+{
   motor1.Drive(-15);
   motor2.Drive(-15);
   motor3.Drive(-30);
