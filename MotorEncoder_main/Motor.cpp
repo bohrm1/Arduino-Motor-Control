@@ -45,12 +45,14 @@ void Motor::SetMotor(int target)
   float u = Kp*e + Kd*dedt + Ki*eintegral;
 
   float pwr = fabs(u);
-  if( pwr > 255 ){
+  if( pwr > 255 )
+  {
     pwr = 255;
   }
   
   int dir = 1;
-  if(e<0){
+  if(e<0)
+  {
     dir = -1;
   }
   Motor::Drive(dir, pwr); 
@@ -58,17 +60,20 @@ void Motor::SetMotor(int target)
 
 void Motor::Drive(int dir, int pwr) 
 {
-  if(dir == 1){
+  if(dir == 1)
+  {
     analogWrite(PWM,pwr);
     digitalWrite(In1,HIGH);
     digitalWrite(In2,LOW);
   }
-  else if(dir == -1){
+  else if(dir == -1)
+  {
     analogWrite(PWM,pwr);
     digitalWrite(In1,LOW);
     digitalWrite(In2,HIGH);
   }
-  else{
+  else
+  {
     digitalWrite(In1,LOW);
     digitalWrite(In2,LOW);
   }  

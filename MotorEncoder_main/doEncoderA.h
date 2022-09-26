@@ -9,36 +9,46 @@ void doEncoderA() {
   int encoder2A = 0;
   int encoder2B = 0;
   
-  if(digitalRead(2) == HIGH) {
-    if(digitalRead(3) == LOW){
+  if(digitalRead(2) == HIGH) 
+  {
+    if(digitalRead(3) == LOW)
+    {
       posi++;
     }
-    else {
+    else
+    {
       posi--;
     }
   }
   else {
-    if(digitalRead(3) == HIGH) {
+    if(digitalRead(3) == HIGH) 
+    {
       posi++;
     }
-    else {
+    else 
+    {
       posi--;
     }
   }
 
-  if(digitalRead(2) == HIGH) {
-    if(digitalRead(3) == LOW){
+  if(digitalRead(2) == HIGH) 
+  {
+    if(digitalRead(3) == LOW)
+    {
       posi++;
     }
-    else {
+    else
+    {
       posi--;
     }
   }
   else {
-    if(digitalRead(3) == HIGH) {
+    if(digitalRead(3) == HIGH) 
+    {
       posi++;
     }
-    else {
+    else 
+    {
       posi--;
     }
   }

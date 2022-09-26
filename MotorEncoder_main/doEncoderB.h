@@ -8,38 +8,50 @@ void doEncoderB() {
   int encoder2A = 0;
   int encoder2B = 0;
 
-  if(digitalRead(3) == HIGH) {
-    if(digitalRead(2) == LOW){
+  if(digitalRead(3) == HIGH)
+  {
+    if(digitalRead(2) == LOW)
+    {
       posi++;
     }
-    else {
+    else 
+    {
       posi--;
     }
   }
-  else {
-    if(digitalRead(2) == LOW) {
+  else 
+  {
+    if(digitalRead(2) == LOW) 
+    {
       posi++;
     }
-    else {
+    else 
+    {
       posi--;
     }
   }
 
-    if(digitalRead(3) == HIGH) {
-      if(digitalRead(2) == LOW){
-        posi++;
-      }
-      else {
-        posi--;
-      }
+  if(digitalRead(3) == HIGH) 
+  {
+    if(digitalRead(2) == LOW)
+    {
+      posi++;
     }
-    else {
-      if(digitalRead(2) == LOW) {
-        posi++;
-      }
-      else {
-        posi--;
-      }
+    else 
+    {
+      posi--;
     }
+  }
+  else 
+  {
+    if(digitalRead(2) == LOW) 
+    {
+      posi++;
+    }
+    else 
+    {
+      posi--;
+    }
+  }
 }
 #endif
