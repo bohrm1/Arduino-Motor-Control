@@ -36,9 +36,6 @@ void DriveRover (int pwr, int dir, MotorNoEncoder &motor1, MotorNoEncoder &motor
             motor3.Drive(pwr);
             motor4.Drive(pwr);
         }
-        else 
-        {
-        }
     }
     else 
     {

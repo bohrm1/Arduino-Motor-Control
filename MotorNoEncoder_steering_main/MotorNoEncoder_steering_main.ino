@@ -23,7 +23,8 @@ MotorNoEncoder motor2;
 MotorNoEncoder motor3;
 MotorNoEncoder motor4;
 
-void setup() {
+void setup() 
+{
   pinMode(PWMA,OUTPUT);
   pinMode(IN1A,OUTPUT);
   pinMode(IN2A,OUTPUT);
@@ -46,9 +47,10 @@ void setup() {
   motor4.ConnectPins(IN1D, IN2D, PWMD);
 }
 
-void loop() {
-int drivePower = 30;
-int rotatePower = 30;
+void loop() 
+{
+  int drivePower = 30;
+  int rotatePower = 30;
 
   DriveRover(drivePower, -1, motor1, motor2, motor3, motor4);
   delay(2000);

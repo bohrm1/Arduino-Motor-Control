@@ -10,17 +10,17 @@ void MotorNoEncoder::ConnectPins(int in1, int in2, int pwmPin)
 }
 void MotorNoEncoder::Drive(int pwr) 
 {
-    analogWrite(PWMPin, abs(pwr));
-    if (pwr < 0) { 
-      digitalWrite(In1,HIGH);
-      digitalWrite(In2,LOW);
-    }
-    else if (pwr >= 0) {
-      digitalWrite(In1,LOW);
-      digitalWrite(In2,HIGH);
-    }
-    else {
-      digitalWrite(In1,LOW);
-      digitalWrite(In2,LOW);
-    }
+  analogWrite(PWMPin, abs(pwr));
+  if (pwr < 0) { 
+    digitalWrite(In1,HIGH);
+    digitalWrite(In2,LOW);
+  }
+  else if (pwr >= 0) {
+    digitalWrite(In1,LOW);
+    digitalWrite(In2,HIGH);
+  }
+  else {
+    digitalWrite(In1,LOW);
+    digitalWrite(In2,LOW);
+  }
 }

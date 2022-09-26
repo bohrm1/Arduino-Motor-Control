@@ -2,7 +2,8 @@
 #define MotorNoEncoder_h
 #include "Arduino.h"
 
-class MotorNoEncoder {
+class MotorNoEncoder 
+{
   private:
     int In1;
     int In2;
