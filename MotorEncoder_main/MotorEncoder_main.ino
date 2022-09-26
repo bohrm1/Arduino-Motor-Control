@@ -12,7 +12,8 @@
 
 Motor motor1;
 
-void setup() {
+void setup() 
+{
   Serial.begin(9600);
   pinMode(ENCA, INPUT);
   pinMode(ENCB, INPUT);
@@ -22,21 +23,23 @@ void setup() {
   
   attachInterrupt(digitalPinToInterrupt(ENCA), doEncoderA, CHANGE);
   attachInterrupt(digitalPinToInterrupt(ENCB), doEncoderB, CHANGE);
+  
+  int kp = 2;
+  int kd = .2;
+  int ki = 0.02;
 
-  motor1.CreateMotor(PWM, IN1, IN2);  
+  motor1.CreateMotor(PWM, IN1, IN2);
+  motor1.SetPID(kp, ki, kd);
 }
 
 /*##############################################################################*/
 /* motor1.Drive() will compute a PID pwr signal to be sent to the motor         */
 /* connected to pins IN1, IN2, and PWM. The motor position is also updated.     */
 /*##############################################################################*/
-void loop() {
+void loop()
+{
   int target = 2000*sin(micros()/1e6);
-  int kp = 2;
-  int kd = .2;
-  int ki = 0.02;
-
-  motor1.DrivePID(kp, kd, ki, target);
+  motor1.SetMotor(target);
   noInterrupts();
   motor1.SetPos(posi); 
   interrupts();  

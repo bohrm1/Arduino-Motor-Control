@@ -7,7 +7,8 @@
 #include "Arduino.h"
 
 volatile int posi = 0;
-void readEncoder(){
+void readEncoder()
+{
   static int8_t lookup_table[] = {0,-1,1,0,1,0,0,-1,-1,0,0,1,0,1,-1,0};
   static uint8_t enc_val = 0;
 

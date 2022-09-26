@@ -9,24 +9,24 @@ void DriveRover (int pwr, int dir, MotorNoEncoder &motor1, MotorNoEncoder &motor
 {
     if (pwr != 0) 
     {
-        int turning_power  = 30;
+        int steering_power  = 30;
         if (pwr < 0) 
         {
-            turning_power = -1 * turning_power;
+            steering_power = -1 * steering_power;
         }
 
         if (dir == -1) 
         {
             motor1.Drive(pwr);
-            motor2.Drive(pwr+30);
+            motor2.Drive(pwr+steering_power);
             motor3.Drive(pwr);
-            motor4.Drive(pwr+30);     
+            motor4.Drive(pwr+steering_power);     
         }
         else if (dir == 1) 
         {
-            motor1.Drive(pwr+30);
+            motor1.Drive(pwr+steering_power);
             motor2.Drive(pwr);
-            motor3.Drive(pwr+30);
+            motor3.Drive(pwr+steering_power);
             motor4.Drive(pwr);
         }
         else if (dir == 0)
