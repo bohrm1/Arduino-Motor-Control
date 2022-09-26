@@ -16,9 +16,5 @@ void readEncoder()
   enc_val = enc_val | ((PIND & 0b1100) >> 2);
 
   posi = posi + lookup_table[enc_val & 0b1111];
-
-  noInterrupts();
-  motor1.SetPos(posi); 
-  interrupts();  
 }
 #endif

@@ -53,8 +53,5 @@ void doEncoderB() {
       posi--;
     }
   }
-  noInterrupts();
-  motor1.SetPos(posi); 
-  interrupts();  
 }
 #endif

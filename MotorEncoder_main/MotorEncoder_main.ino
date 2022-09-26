@@ -40,4 +40,8 @@ void loop()
 {
   int target = 2000*sin(micros()/1e6);
   motor1.SetMotor(target);
+
+  noInterrupts();
+  motor1.SetPos(posi); 
+  interrupts();  
 }
