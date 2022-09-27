@@ -20,28 +20,52 @@ void speed_test_stress(MotorNoEncoder &motor1, MotorNoEncoder &motor2, MotorNoEn
     motor4.Drive(minSpeed);
     delay(3000);
 
-    Serial.print("MOTOR 1 FULL SPEED");
+    Serial.print("3");
+    delay(1000);
+    Serial.print("2");
+    delay(1000);
+    Serial.print("1");
+    delay(1000);
+    Serial.print("MOTOR 1 FULL POWER");
     Serial.print("")
     motor1.Drive(maxSpeed);
     Delay(2000);
     motor1.Drive(minSpeed);
     delay(3000);
 
-    Serial.print("MOTOR 2 FULL SPEED");
+    Serial.print("3");
+    delay(1000);
+    Serial.print("2");
+    delay(1000);
+    Serial.print("1");
+    delay(1000);
+    Serial.print("MOTOR 2 FULL POWER");
     Serial.print("")
     motor2.Drive(maxSpeed);
     Delay(2000);
     motor2.Drive(minSpeed);
     delay(3000);
 
-    Serial.print("MOTOR 3 FULL SPEED");
+    Serial.print("3");
+    delay(1000);
+    Serial.print("2");
+    delay(1000);
+    Serial.print("1");
+    delay(1000);
+    Serial.print("MOTOR 3 FULL POWER");
     Serial.print("")
     motor3.Drive(maxSpeed);
     Delay(2000);
     motor3.Drive(minSpeed);
     delay(3000);
 
-    Serial.print("MOTOR 4 FULL SPEED");
+    Serial.print("3");
+    delay(1000);
+    Serial.print("2");
+    delay(1000);
+    Serial.print("1");
+    delay(1000);
+    Serial.print("MOTOR 4 FULL POWER");
     Serial.print("")
     motor4.Drive(maxSpeed);
     Delay(2000);
