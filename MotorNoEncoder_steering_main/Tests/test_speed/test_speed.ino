@@ -51,9 +51,5 @@ void setup()
 
 void loop() 
 {
-Serial.print("Turning ");
-motor1.Drive(255);
-motor2.Drive(255);
-motor3.Drive(255);
-motor4.Drive(255);
+  speed_stress_test(motor1, motor2, motor3, motor4);
 }
