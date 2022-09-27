@@ -2,7 +2,7 @@
 #define speed_stress_test_h
 #include "Arduino.h"
 
-void speed_test_stress(&motor1, &motor2, &motor3, &motor4)  
+void speed_test_stress(MotorNoEncoder &motor1, MotorNoEncoder &motor2, MotorNoEncoder &motor3, MotorNoEncoder &motor4)  
 {
     int maxSpeed = 255;
     int minSpeed = 0;
@@ -47,5 +47,5 @@ void speed_test_stress(&motor1, &motor2, &motor3, &motor4)
     Delay(2000);
     motor4.Drive(minSpeed);
     delay(3000);
-
 }
+#endif 
