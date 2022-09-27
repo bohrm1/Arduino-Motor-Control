@@ -45,3 +45,8 @@ void loop()
   motor1.SetPos(posi); 
   interrupts();  
 }
+/*##############################################################################*/
+/* The encoder counter ISR can trigger multiple times inbetween                 */
+/* motor.SetPos(pos) instances, so the ActuaLPos member variable will           */
+/* have worse resolution than the posi variable.                                */
+/*##############################################################################*/

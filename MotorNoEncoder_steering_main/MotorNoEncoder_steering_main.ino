@@ -49,25 +49,11 @@ void setup()
 
 void loop() 
 {
-  int drivePower = 30;
+  int drivePower = 255;
   int rotatePower = 30;
 
-  DriveRover(drivePower, -1, motor1, motor2, motor3, motor4);
-  delay(2000);
-  DriveRover(drivePower, 1, motor1, motor2, motor3, motor4);
-  delay(2000);
-  DriveRover(drivePower, 0, motor1, motor2, motor3, motor4);
-  delay(2000);
-
-  DriveRover(-1*drivePower, -1, motor1, motor2, motor3, motor4);
-  delay(2000);
-  DriveRover(-1*drivePower, 1, motor1, motor2, motor3, motor4);
-  delay(2000);
-  DriveRover(-1*drivePower, 0, motor1, motor2, motor3, motor4);
-  delay(2000);
-
-  RotateRover(rotatePower, motor1, motor2, motor3, motor4);
-  delay(2000);
-  RotateRover(-1*rotatePower, motor1, motor2, motor3, motor4);
-  delay(2000);
+  DriveRover(drivePower, 0, motor1, motor2, motor4, motor3);
+  //delay(2000);
+  //RotateRover(rotatePower, motor1, motor2, motor4, motor3);
+  //delay(2000);
 }

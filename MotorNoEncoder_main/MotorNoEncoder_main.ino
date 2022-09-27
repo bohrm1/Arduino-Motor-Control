@@ -47,14 +47,8 @@ void setup()
 
 void loop() 
 {
-  motor1.Drive(-15);
-  motor2.Drive(-15);
-  motor3.Drive(-30);
-  motor4.Drive(-40);
-  delay(2000);
-  motor1.Drive(15);
-  motor2.Drive(15);
-  motor3.Drive(30);
-  motor4.Drive(40);
-  delay(2000);
+  motor1.Drive(0);
+  motor2.Drive(0);
+  motor3.Drive(0);
+  motor4.Drive(255);
 }
