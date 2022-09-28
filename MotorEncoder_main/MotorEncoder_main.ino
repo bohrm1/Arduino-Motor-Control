@@ -21,6 +21,15 @@ void setup()
   pinMode(IN1,OUTPUT);
   pinMode(IN2,OUTPUT);
   
+/*##############################################################################*/
+/* Two external interrupts on the arduino are attached to the two quadrature    */
+/* encoders on the motor with encoder. When the motor rotates, the the encoder  */
+/* is triggered. The digitalPinToInterrupt() converts the arduino pin           */
+/* number to the external interrupt number which in this case is 0 and 1. So,   */
+/* we are attachnig interrupts 0 and 1 to arduino pins 2 and 3 that trigger on  */  
+/* on either the rising or falling edge (hence CHANGE), and will invoke the ISR */
+/* subroutine called doEncoderA if ENCA triggers and doEncoderB if ENCA         */
+/*##############################################################################*/
   attachInterrupt(digitalPinToInterrupt(ENCA), doEncoderA, CHANGE);
   attachInterrupt(digitalPinToInterrupt(ENCB), doEncoderB, CHANGE);
   
@@ -38,9 +47,11 @@ void setup()
 /*##############################################################################*/
 void loop()
 {
+  //micros() function returns microseconds since start of program. 
   int target = 2000*sin(micros()/1e6);
   motor1.SetMotor(target);
 
+  //disabling interrupts while updating motor position 
   noInterrupts();
   motor1.SetPos(posi); 
   interrupts();  
