@@ -23,12 +23,12 @@ void setup()
   
 /*##############################################################################*/
 /* Two external interrupts on the arduino are attached to the two quadrature    */
-/* encoders on the motor with encoder. When the motor rotates, the the encoder  */
+/* encoders on the motor with encoder. When the motor rotates, the encoder      */
 /* is triggered. The digitalPinToInterrupt() converts the arduino pin           */
-/* number to the external interrupt number which in this case is 0 and 1. So,   */
-/* we are attachnig interrupts 0 and 1 to arduino pins 2 and 3 that trigger on  */  
+/* number to the interrupt number which in this case is 0 and 1. So,            */
+/* we are attaching interrupts 0 and 1 to arduino pins 2 and 3 that trigger on  */  
 /* on either the rising or falling edge (hence CHANGE), and will invoke the ISR */
-/* subroutine called doEncoderA if ENCA triggers and doEncoderB if ENCA         */
+/* function called doEncoderA if ENCA triggers and doEncoderB if ENCB triggers  */
 /*##############################################################################*/
   attachInterrupt(digitalPinToInterrupt(ENCA), doEncoderA, CHANGE);
   attachInterrupt(digitalPinToInterrupt(ENCB), doEncoderB, CHANGE);
