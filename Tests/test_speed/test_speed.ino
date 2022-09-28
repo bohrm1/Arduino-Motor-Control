@@ -1,5 +1,5 @@
 #include "MotorNoEncoder.h"
-#include "speed_stress_test.h"
+#include "SpeedStressTest.h"
 
 #define IN1A 3
 #define IN2A 4
@@ -25,6 +25,8 @@ MotorNoEncoder motor4;
 void setup() 
 {
   Serial.begin(9600);
+  Serial.println("Motor Stress Test");
+  delay(2000);
 
   pinMode(PWMA,OUTPUT);
   pinMode(IN1A,OUTPUT);
@@ -50,5 +52,5 @@ void setup()
 
 void loop() 
 {
-  speed_stress_test(motor1, motor2, motor3, motor4);
+  SpeedStressTest(motor1, motor2, motor3, motor4);
 }

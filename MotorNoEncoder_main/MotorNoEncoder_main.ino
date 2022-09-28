@@ -48,7 +48,7 @@ void setup()
 void loop() 
 {
   motor1.Drive(0);
-  motor2.Drive(0);
+  motor2.Drive(255);
   motor3.Drive(0);
-  motor4.Drive(255);
+  motor4.Drive(0);
 }
