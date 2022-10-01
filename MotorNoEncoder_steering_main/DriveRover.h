@@ -7,7 +7,7 @@ void DriveRover (int pwr, int dir, MotorNoEncoder &motor1, MotorNoEncoder &motor
 {
     if (pwr != 0) 
     {
-        int steering_power  = 30;
+        int steering_power  = 100;
         if (pwr < 0) 
         {
             steering_power = -1 * steering_power;
