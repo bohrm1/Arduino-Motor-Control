@@ -5,13 +5,13 @@
 class Motor 
 {
   private:
-    int PWM;
+    int PWM;                               //creating member variables to describe motor with encoder
     int In1;
     int In2;
-    int ActualPos = 0;
+    int ActualPos = 0; 
     int Dir;
 
-    int Kp = 0;
+    int Kp = 0;                            //constants for PID controller internal to class
     int Ki = 0;
     int Kd = 0;
 
