@@ -9,15 +9,15 @@ void Motor::CreateMotor(int pwm, int in1, int in2)
   In1 = in1;
   In2 = in2;
 }
+//
+//void Motor::SetPID(int kp, int ki, int kd) 
+//{
+//  Kp = kp;
+//  Ki = ki;
+//  Kd = kd;
+//}
 
-void Motor::SetPID(int kp, int ki, int kd) 
-{
-  Kp = kp;
-  Ki = ki;
-  Kd = kd;
-}
-
-void Motor::SetMotor(int target) 
+void Motor::SetMotor(int target, int kp, int ki, int kd) 
 {
   long currT = micros();
   float deltaT = ((float) (currT - prevT))/( 1.0e6 );
@@ -42,7 +42,7 @@ void Motor::SetMotor(int target)
   eintegral = eintegral + e*deltaT;
 
   // control signal
-  float u = Kp*e + Kd*dedt + Ki*eintegral;
+  float u = kp*e + kd*dedt + ki*eintegral;
 
   float pwr = fabs(u);
   if( pwr > 255 )
@@ -56,6 +56,8 @@ void Motor::SetMotor(int target)
     dir = -1;
   }
   Motor::Drive(dir, pwr); 
+
+  eprev = e;
 }
 
 void Motor::Drive(int dir, int pwr) 

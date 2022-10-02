@@ -30,28 +30,5 @@ void doEncoderB() {
       posi--;
     }
   }
-
-  if(digitalRead(3) == HIGH) 
-  {
-    if(digitalRead(2) == LOW)
-    {
-      posi++;
-    }
-    else 
-    {
-      posi--;
-    }
-  }
-  else 
-  {
-    if(digitalRead(2) == LOW) 
-    {
-      posi++;
-    }
-    else 
-    {
-      posi--;
-    }
-  }
 }
 #endif

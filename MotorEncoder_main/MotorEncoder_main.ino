@@ -32,13 +32,14 @@ void setup()
 /*##############################################################################*/
   attachInterrupt(digitalPinToInterrupt(ENCA), doEncoderA, CHANGE);
   attachInterrupt(digitalPinToInterrupt(ENCB), doEncoderB, CHANGE);
-  
-  int kp = 2;
-  int kd = .2;
-  int ki = 0.02;
+
 
   motor1.CreateMotor(PWM, IN1, IN2);
-  motor1.SetPID(kp, ki, kd);
+//  int kp = 2;
+//  int kd = 0.2;
+//  int ki = 0.02;
+//  motor1.SetPID(kp, ki, kd);
+  
 }
 
 /*##############################################################################*/
@@ -47,9 +48,12 @@ void setup()
 /*##############################################################################*/
 void loop()
 {
+  int kp = 2;
+  int kd = 0.2;
+  int ki = 0.02;
   //micros() function returns microseconds since start of program. 
   int target = 2000*sin(micros()/1e6);
-  motor1.SetMotor(target);
+  motor1.SetMotor(target, kp, ki, kd);
 
   //disabling interrupts while updating motor position 
   noInterrupts();

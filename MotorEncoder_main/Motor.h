@@ -22,8 +22,8 @@ class Motor
   public:
     Motor(void);
     void CreateMotor(int pwm, int in1, int in2);
-    void SetPID(int kp, int ki, int kd);
-    void SetMotor(int target);
+  //  void SetPID(int kp, int ki, int kd);
+    void SetMotor(int target, int kp, int ki, int kd);
     void Drive(int dir, int pwr);
     void SetPos(int pos);
     int GetPos(void);
