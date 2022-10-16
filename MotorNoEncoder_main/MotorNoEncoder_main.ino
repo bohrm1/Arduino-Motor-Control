@@ -1,20 +1,20 @@
 #include "MotorNoEncoder.h"
 
-#define IN1A 3
-#define IN2A 4
-#define PWMA 5
+#define IN1A 24
+#define IN2A 25
+#define PWMA 4
 
-#define IN1B 7
-#define IN2B 8
-#define PWMB 9
+#define IN1B 26
+#define IN2B 27
+#define PWMB 5
 
-#define IN1C 2
-#define IN2C 6
-#define PWMC 10
+#define IN1C 28
+#define IN2C 29
+#define PWMC 6
 
-#define IN1D 12
-#define IN2D 13
-#define PWMD 11
+#define IN1D 30
+#define IN2D 31
+#define PWMD 7
 
 MotorNoEncoder motor1;
 MotorNoEncoder motor2;
@@ -47,8 +47,8 @@ void setup()
 
 void loop() 
 {
-  motor1.Drive(0);
+  motor1.Drive(255);
   motor2.Drive(255);
-  motor3.Drive(0);
-  motor4.Drive(0);
+  motor3.Drive(255);
+  motor4.Drive(255);
 }
