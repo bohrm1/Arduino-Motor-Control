@@ -1,6 +1,6 @@
 # Arduino-Motor-Control
 
-This repository is part of the Disaster Rover's TCNJ ECE Senior Project of 2022-2023. The most relevant directory is the MotorNoEncoder_steering_main directory. Various C++ class files were written to simpify the process of interfacing with multiple motors, especially in a robotics context.
+This repository is part of the Disaster Rover's TCNJ ECE Senior Project of 2022-2023. Various C++ class files were written to simpify the process of interfacing with multiple motors, especially in a robotics context. The most relevant directory is the MotorNoEncoder_steering_main directory. 
 
 1. MotorEncoder_main contains a MotorEncoder class that encapsulates all of the pins and functionality of a motor with encoder.
 
