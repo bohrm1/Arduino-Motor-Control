@@ -52,7 +52,7 @@ void loop()
   int kd = 0.2;
   int ki = 0.02;
   //micros() function returns microseconds since start of program. 
-  int target = 2000*sin(micros()/1e6);
+  int target = 500*sin(micros()/1e6) + 1000*sin(2*micros()/ 1e6);
   motor1.SetMotor(target, kp, ki, kd);
 
   //disabling interrupts while updating motor position 
